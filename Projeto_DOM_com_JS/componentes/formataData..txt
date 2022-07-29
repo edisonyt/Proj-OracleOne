@@ -1,0 +1,46 @@
+\\linha de comentario
+
+const data = new Date()
+\\ Wed Oct 14 2020 14:14:24 GMT-0300 (Brasilia Standard Time)
+
+data.toLocaleDateString('pt-BR')
+\\ "10/14/2020"
+
+const dataOptions = {
+   weekend: 'long',
+   year: 'numeric',
+   month:'long',
+   day: 'numeric'
+}
+
+data.toLocaleDateString('pt-BR', dataOptions)
+
+\\ 28 de agosto de 2020
+
+data.toLocaleTimeString()
+\\ “9:04:54 AM”
+
+const horarioOptions = {
+   hour12: false,
+   hour: 'numeric',
+   minute: '2-digit',
+   second: '2-digit', 
+   timeZone: 'America/Sao_Paulo'
+}
+
+data.toLocaleTimeString('pt-BR', horarioOptions)
+\\ “9:04:54”
+
+data.toLocaleString('pt-BR', {
+   ...dataOptions, 
+   ...horarioOptions
+})
+\\ “28 de agosto de 2020 9:04:54”
+
+const formataData = new Intl.DateTimeFormat('pt-BR', {
+   ...dataOptions,
+   ...horarioOptions
+})
+
+formataData.format(data)
+\\ “28 de agosto de 2020 9:04:54”
