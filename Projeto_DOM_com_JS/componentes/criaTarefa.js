@@ -8,12 +8,12 @@ export const novoItem = (evento) => {
 
     const tarefas = JSON.parse(localStorage.getItem('tarefas')) || []
 
-
     const input = document.querySelector('[data-form-input]')
     const valor = input.value
 
     const calendario = document.querySelector('[data-date]')
     const data = moment(calendario.value)
+ 
     const dataFormatada = data.format('DD/MM/YYYY')
 
     const dados = {
@@ -22,8 +22,6 @@ export const novoItem = (evento) => {
     }
 
     const tarefasAtualizadas = [... tarefas, dados]
-
-
 
     localStorage.setItem("tarefas", JSON.stringify(tarefasAtualizadas))
 
