@@ -32,7 +32,7 @@ const listaClientes = () => {
         }
         http.send()
     })
-    console.log(promise)
+
     return promise
 
 }
