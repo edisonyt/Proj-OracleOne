@@ -7,20 +7,20 @@ const concluirTarefa = (atualiza, id) => {
     */
         const tarefaCadastradas = JSON.parse(localStorage.getItem('tarefas'))
     
-        tarefaCadasradas[id].concluida = !tarefaCadasradas[id].concluida
+        tarefaCadastradas[id].concluida = !tarefaCadastradas[id].concluida
     
-        localStorage.setItem('tarefas',JSON.stringify(tarefaCadasradas))
+        localStorage.setItem('tarefas',JSON.stringify(tarefaCadastradas))
     
         atualiza()
     }
 
-const BotaoConclui = () => {
+const BotaoConclui = (atualiza,  id) => {
     const botaoConclui = document.createElement('button')
 
     botaoConclui.classList.add('check-button')
     botaoConclui.innerText = 'concluir'
     
-    botaoConclui.addEventListener('click', () => concluirTarefa(atualiza, id))
+    botaoConclui.addEventListener('click', ()=> concluirTarefa(atualiza, id))
     
     return botaoConclui
 }
