@@ -6,6 +6,7 @@
       "id": 1
     },
     {
+<<<<<<< HEAD
       "nome": "Edison",
       "email": "edison.takaesu@gmail.com",
       "id": 2
@@ -24,6 +25,11 @@
       "nome": "antonio ",
       "email": "aaburgos@hotmail.com",
       "id": 5
+=======
+      "nome": "Edison  Takaesu",
+      "email": "edisonyt@gmail.com",
+      "id": 2
+>>>>>>> b820fbea3c3e8039dd74a7a5888bb6c864205ae6
     }
   ]
 }
