@@ -12,7 +12,6 @@ const dados = await clienteService.detalhaCliente(id)
 inputNome.value = dados.nome
 inputEmail.value = dados.email
 
-
 const formulario = document.querySelector('[data-form]')
 
 formulario.addEventListener('submit', async (evento) => {
