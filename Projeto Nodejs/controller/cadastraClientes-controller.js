@@ -10,5 +10,4 @@ formulario.addEventListener('submit',async (evento) => {
     await clienteService.criaCliente(nome, email)
 
         window.location.href = '../telas/cadastro_concluido.html'
-
-})
+    })

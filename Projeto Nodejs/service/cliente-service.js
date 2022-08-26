@@ -1,12 +1,13 @@
-export const listaClientes = () => {
+const listaClientes = () => {
     return fetch(`http://localhost:3000/profile`)
-    .then( resposta => {
-        return resposta.json()
-    })
+        .then(resposta => {
+            return resposta.json()
+        })
 }
 
-const criaCliente = (nome, email) =>{
+const criaCliente = (nome, email) => {
     return fetch(`http://localhost:3000/profile`, {
+
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -16,10 +17,11 @@ const criaCliente = (nome, email) =>{
             email: email
         })
     })
-    .then( resposta => {
-        return resposta.body
-    })
+        .then(resposta => {
+            return resposta.body
+        })
 }
+
 
 const removeCliente = (id) => {
     return fetch(`http://localhost:3000/profile/${id}`,{

@@ -1,4 +1,5 @@
 import { clienteService } from '../service/cliente-service.js'
+
 const criaNovaLinha = (nome, email, id) => {
     const linhaNovoCliente = document.createElement('tr')
     const conteudo = `
@@ -18,6 +19,7 @@ const criaNovaLinha = (nome, email, id) => {
     return linhaNovoCliente
 }
 
+
 const tabela = document.querySelector('[data-tabela]')
 
 tabela.addEventListener('click', async (evento) =>{
@@ -30,16 +32,6 @@ tabela.addEventListener('click', async (evento) =>{
     }
 })
 
-/*
-clienteService.listaClientes()
-.then( data => {
-    data.forEach(elemento => {
-        tabela.appendChild(criaNovaLinha(elemento.nome,
-            elemento.email, elemento.id))
-    })
-})
-*/
-
 const render = async () => {
     const listaClientes = await clienteService.listaClientes()
 
@@ -50,6 +42,15 @@ const render = async () => {
 }
 
 render()
+
+/*
+clienteService.listaClientes()
+.then( data => {
+    data.forEach(elemento => {
+        tabela.appendChild(criaNovaLinha(elemento.nome,
+        elemento.email, elemento.id))
+    })
+})
 
   /*const listaClientes = () => {
     const promise = new Promise((resolve, reject) => {
