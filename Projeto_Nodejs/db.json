@@ -11,14 +11,17 @@
       "id": 2
     },
     {
-      "nome": "Edison",
+      "nome": "Edison 1234",
       "email": "edisonyt@gmail.com",
       "id": 3
+<<<<<<< HEAD:Projeto_Nodejs/db.json
     },
     {
       "nome": "antonio ",
       "email": "aaburgos@hotmail.com",
       "id": 5
+=======
+>>>>>>> 2af106e51e9b6ad0a2a4467806253a63c95d9dcf:Projeto Nodejs/db.json
     }
   ]
 }
