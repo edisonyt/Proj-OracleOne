@@ -17,8 +17,10 @@
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
-
+    
     margin-bottom: 1.5rem;
+    margin-top: 4rem;
+  
 }
 
 .chamada__texto {
@@ -42,6 +44,7 @@
     .chamada {
         background-image: url(../img/bg-intro.jpg);
         background-size: cover;
+
         padding-top: 8.25rem;
     }
     .chamada__titulo {
